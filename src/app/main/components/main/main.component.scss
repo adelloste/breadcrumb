@@ -1,0 +1,18 @@
+// .wrapper {
+//     display: flex;
+//     width: 100%;
+//     align-items: stretch;
+    
+//     .wrapper-main {
+//         width: 100%;
+//         margin-bottom: 5em;
+//     }
+// }
+
+.wrapper-main {
+    margin-left: 250px;
+    transition: margin-left .5s;
+    position: relative;
+    min-height: 100vh;
+    padding: 5em 1em;
+}

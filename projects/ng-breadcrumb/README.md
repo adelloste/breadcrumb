@@ -21,12 +21,12 @@ Finally, you can use ng-breadcrumb in your Angular project. You have to import `
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule }      from '@angular/core';
 
-import { BreadcrumbModule } from '@ngx-translate/core';
+import { NgBreadcrumbModule } from 'ng-breadcrumb';
 
 @NgModule({
     imports: [
         BrowserModule,
-        BreadcrumbModule.forRoot()
+        NgBreadcrumbModule.forRoot()
     ],
     bootstrap: [
         AppComponent
@@ -43,7 +43,7 @@ If you use a `SharedModule` that you import in multiple other feature modules, y
 @NgModule({
     exports: [
         CommonModule,
-        BreadcrumbModule
+        NgBreadcrumbModule
     ]
 })
 export class SharedModule { }
