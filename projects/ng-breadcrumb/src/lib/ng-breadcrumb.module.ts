@@ -18,10 +18,10 @@ import { BreadcrumbConfig } from './configs/breadcrumb.config';
     BreadcrumbComponent
   ]
 })
-export class BreadcrumbModule {
+export class NgBreadcrumbModule {
   static forRoot(config: BreadcrumbConfig = {}): ModuleWithProviders {
     return {
-      ngModule: BreadcrumbModule,
+      ngModule: NgBreadcrumbModule,
       providers: [
         {
           provide: 'config', 
