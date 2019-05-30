@@ -17,7 +17,6 @@ export class BreadcrumbComponent implements OnInit, OnChanges, OnDestroy {
 
   @Input() public prefixs?: Breadcrumb[];
 
-  public url: string = "";
   public breadcrumbs: Breadcrumb[] = [];
   public sub: Subscription;
 
@@ -78,7 +77,7 @@ export class BreadcrumbComponent implements OnInit, OnChanges, OnDestroy {
    * @param route 
    * @param breadcrumbs 
    */
-  private buildBreadcrumb(route: ActivatedRoute, breadcrumbs: Breadcrumb[] = []): Breadcrumb[] {
+  private buildBreadcrumb(route: ActivatedRoute, breadcrumbs: Breadcrumb[] = [], url: string = ''): Breadcrumb[] {
     // Get the child routes
     let children: ActivatedRoute[] = route.children;
     // Return if there are no more children
@@ -93,14 +92,14 @@ export class BreadcrumbComponent implements OnInit, OnChanges, OnDestroy {
         // Get the route's URL segment
         let routeURL: string = route.snapshot.url.map(segment => segment.path).join("/");
         // Create url
-        this.url = this.url + `/${routeURL}`;
+        url = url + `/${routeURL}`;
         // Create breadcrumb
-        let breadcrumb: Breadcrumb = new Breadcrumb(this.url, child.snapshot.data[BREADCRUMB], child.snapshot.params);
+        let breadcrumb: Breadcrumb = new Breadcrumb(url, child.snapshot.data[BREADCRUMB], child.snapshot.params);
         // Add the breadcrumb
         breadcrumbs = [ ...breadcrumbs, breadcrumb ];
       }
       // Recursive
-      return this.buildBreadcrumb(child, breadcrumbs);
+      return this.buildBreadcrumb(child, breadcrumbs, url);
     }
   }
 
