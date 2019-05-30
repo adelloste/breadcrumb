@@ -5,12 +5,12 @@ import { RouterModule } from '@angular/router';
   imports: [
     RouterModule.forRoot([
       {
-        path: 'main',
-        loadChildren: './main/main.module#MainModule'
+        path: 'home',
+        loadChildren: './home/home.module#HomeModule'
       },
       {
         path: '**',
-        redirectTo: "/main/home",
+        redirectTo: "/home",
         pathMatch: 'full'
       }
     ],

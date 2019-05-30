@@ -18,10 +18,10 @@
       "dom"
     ],
     "paths": {
-      "ng-breadcrumb": [
+      "@adelloste/ng-breadcrumb": [
         "dist/ng-breadcrumb"
       ],
-      "ng-breadcrumb/*": [
+      "@adelloste/ng-breadcrumb/*": [
         "dist/ng-breadcrumb/*"
       ]
     }

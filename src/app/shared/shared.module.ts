@@ -4,7 +4,10 @@ import { RouterModule }                     from '@angular/router';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { HttpClientModule }                 from '@angular/common/http';
 
-import { NgBreadcrumbModule } from 'ng-breadcrumb';
+import { SidemenuComponent } from './components/sidemenu/sidemenu.component';
+import { NavbarComponent }   from './components/navbar/navbar.component';
+
+import { NgBreadcrumbModule } from '@adelloste/ng-breadcrumb';
 
 @NgModule({
   imports: [
@@ -14,13 +17,19 @@ import { NgBreadcrumbModule } from 'ng-breadcrumb';
     
     NgBreadcrumbModule.forRoot()
   ],
-  declarations: [],
+  declarations: [
+    SidemenuComponent,
+    NavbarComponent
+  ],
   exports: [
     CommonModule,
     RouterModule,
     FormsModule,
     ReactiveFormsModule,
     HttpClientModule,
+
+    SidemenuComponent,
+    NavbarComponent,
 
     NgBreadcrumbModule
   ]

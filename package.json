@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve",
-    "build": "ng build",
+    "build": "ng build --subresource-integrity",
     "test": "ng test",
     "lint": "ng lint",
     "e2e": "ng e2e"
@@ -20,7 +20,10 @@
     "@angular/platform-browser": "~7.0.0",
     "@angular/platform-browser-dynamic": "~7.0.0",
     "@angular/router": "~7.0.0",
+    "bootstrap": "^4.3.1",
+    "classlist.js": "^1.1.20150312",
     "core-js": "^2.5.4",
+    "font-awesome": "^4.7.0",
     "rxjs": "~6.3.3",
     "zone.js": "~0.8.26"
   },
