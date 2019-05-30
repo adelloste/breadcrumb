@@ -1,3 +1,9 @@
-<ng-breadcrumb [prefixs]="prefixs"></ng-breadcrumb> 
+<ad-navbar></ad-navbar>
 
-<router-outlet></router-outlet>
+<main role="main">
+    <ad-sidemenu></ad-sidemenu>
+    <div class="container-fluid pages p-4">
+        <ng-breadcrumb></ng-breadcrumb>
+        <router-outlet></router-outlet>
+    </div>
+</main>
