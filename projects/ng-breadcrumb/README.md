@@ -1,6 +1,6 @@
-## ng-breadrumbs
+## ng-breadrumb
 
-ng-breadrumbs is a module for Angular that generates a breadcrumb that indicate the current page’s location within a navigational hierarchy.
+ng-breadrumb is a module for Angular that generates a breadcrumb that indicate the current page’s location within a navigational hierarchy.
 It is based on the built-in Angular router.
 
 ## Installation
@@ -8,7 +8,7 @@ It is based on the built-in Angular router.
 First you need to install the npm module:
 
 ```sh
-npm install @ng-breadcrumb --save
+npm install @adelloste/ng-breadcrumb --save
 ```
 
 ## Usage
@@ -21,7 +21,7 @@ Finally, you can use ng-breadcrumb in your Angular project. You have to import `
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule }      from '@angular/core';
 
-import { NgBreadcrumbModule } from 'ng-breadcrumb';
+import { NgBreadcrumbModule } from '@adelloste/ng-breadcrumb';
 
 @NgModule({
     imports: [
@@ -89,7 +89,7 @@ export const ROUTES: Routes = [
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule }      from '@angular/core';
 
-import { BreadcrumbModule } from '@ngx-translate/core';
+import { BreadcrumbModule } from '@adelloste/ng-breadcrumb';
 
 @NgModule({
     imports: [
@@ -116,10 +116,10 @@ export class AppModule { }
 ```ts
 import { Component, OnInit } from '@angular/core';
 
-import { Breadcrumb } from 'breadcrumb';
+import { Breadcrumb } from '@adelloste/ng-breadcrumb';
 
 @Component({
-  selector: 'adellost-main',
+  selector: 'ad-main',
   templateUrl: './main.component.html',
   styleUrls: ['./main.component.scss']
 })
