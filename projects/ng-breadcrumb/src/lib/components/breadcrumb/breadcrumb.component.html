@@ -1,6 +1,6 @@
 <nav aria-label="breadcrumb">
-  <ol class="breadcrumb">
-    <li class="breadcrumb-item" *ngFor="let breadcrumb of breadcrumbs; let last = last" [ngClass]="{'active': last}">
+  <ol class="ad-breadcrumb">
+    <li class="ad-breadcrumb__item" *ngFor="let breadcrumb of breadcrumbs; let last = last" [ngClass]="{'ad-breadcrumb__item_active': last}">
       <a *ngIf="!last" [routerLink]="breadcrumb.url">
         {{breadcrumb.label}}
       </a>
