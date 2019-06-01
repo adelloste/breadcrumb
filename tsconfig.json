@@ -16,6 +16,14 @@
     "lib": [
       "es2018",
       "dom"
-    ]
+    ],
+    "paths": {
+      "@adelloste/ng-breadcrumb": [
+        "dist/@adelloste/ng-breadcrumb"
+      ],
+      "@adelloste/ng-breadcrumb/*": [
+        "dist/@adelloste/ng-breadcrumb/*"
+      ]
+    }
   }
 }

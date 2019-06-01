@@ -7,7 +7,7 @@
       "root": "",
       "sourceRoot": "src",
       "projectType": "application",
-      "prefix": "app",
+      "prefix": "ad",
       "schematics": {
         "@schematics/angular:component": {
           "styleext": "scss"
@@ -127,6 +127,41 @@
           "builder": "@angular-devkit/build-angular:tslint",
           "options": {
             "tsConfig": "e2e/tsconfig.e2e.json",
+            "exclude": [
+              "**/node_modules/**"
+            ]
+          }
+        }
+      }
+    },
+    "ng-breadcrumb": {
+      "root": "projects/ng-breadcrumb",
+      "sourceRoot": "projects/ng-breadcrumb/src",
+      "projectType": "library",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-ng-packagr:build",
+          "options": {
+            "tsConfig": "projects/ng-breadcrumb/tsconfig.lib.json",
+            "project": "projects/ng-breadcrumb/ng-package.json"
+          }
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/ng-breadcrumb/src/test.ts",
+            "tsConfig": "projects/ng-breadcrumb/tsconfig.spec.json",
+            "karmaConfig": "projects/ng-breadcrumb/karma.conf.js"
+          }
+        },
+        "lint": {
+          "builder": "@angular-devkit/build-angular:tslint",
+          "options": {
+            "tsConfig": [
+              "projects/ng-breadcrumb/tsconfig.lib.json",
+              "projects/ng-breadcrumb/tsconfig.spec.json"
+            ],
             "exclude": [
               "**/node_modules/**"
             ]
