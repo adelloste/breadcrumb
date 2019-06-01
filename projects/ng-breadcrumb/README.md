@@ -1,7 +1,12 @@
-## ng-breadrumb
+## @adelloste/ng-breadrumb
 
 ng-breadrumb is a module for Angular that generates a breadcrumb that indicate the current page’s location within a navigational hierarchy.
 It is based on the built-in Angular router.
+
+## Table of contents
+
+* [Installation](#installation)
+* [Usage](#usage)
 
 ## Installation
 
@@ -11,11 +16,13 @@ First you need to install the npm module:
 npm install @adelloste/ng-breadcrumb --save
 ```
 
+**[⬆ back to top](#table-of-contents)**
+
 ## Usage
 
 #### 1. Import the `BreadcrumbModule`:
 
-Finally, you can use ng-breadcrumb in your Angular project. You have to import `BreadcrumbModule.forRoot()` in the root NgModule of your application.
+Finally, you can use ng-breadcrumb in your Angular project. You have to import `NgBreadcrumbModule.forRoot()` in the root NgModule of your application.
 
 ```ts
 import { BrowserModule } from '@angular/platform-browser';
@@ -37,7 +44,7 @@ export class AppModule { }
 
 ##### SharedModule
 
-If you use a `SharedModule` that you import in multiple other feature modules, you can export the `BreadcrumbModule` to make sure you don't have to import it in every module.
+If you use a `SharedModule` that you import in multiple other feature modules, you can export the `NgBreadcrumbModule` to make sure you don't have to import it in every module.
 
 ```ts
 @NgModule({
@@ -89,12 +96,12 @@ export const ROUTES: Routes = [
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule }      from '@angular/core';
 
-import { BreadcrumbModule } from '@adelloste/ng-breadcrumb';
+import { NgBreadcrumbModule } from '@adelloste/ng-breadcrumb';
 
 @NgModule({
     imports: [
         BrowserModule,
-        BreadcrumbModule.forRoot({
+        NgBreadcrumbModule.forRoot({
           prefixes: [
             { url: '', label: 'Prefix-Global', params: {} }
           ]
@@ -133,3 +140,5 @@ export class MainComponent implements OnInit {
 
 }
 ```
+
+**[⬆ back to top](#table-of-contents)**
