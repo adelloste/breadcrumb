@@ -58,13 +58,16 @@ export class SharedModule { }
 
 #### 2. Add a `breadcrumb` property in the route's data:
 
+If you want to provide individual icons, add a `icon` property in the route's data.
+
 ```ts
 export const ROUTES: Routes = [
     {
         path: 'home',
         loadChildren: 'app/home/home.module#HomeModule',
         data: {
-            breadcrumb: 'Home'
+            breadcrumb: 'Home',
+            icon: 'fa fa-home'  // I'm using font-awesome (only CSS classes)
         }
     },
     {

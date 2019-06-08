@@ -11,6 +11,7 @@ $breadcrumb-border-radius: .25rem;
 
 .ad-breadcrumb {
   display: flex;
+  align-items: flex-end;
   flex-wrap: wrap;
   padding: $breadcrumb-padding-y $breadcrumb-padding-x;
   margin-bottom: $breadcrumb-margin-bottom;
