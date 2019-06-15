@@ -7,6 +7,7 @@ It is based on the built-in Angular router.
 
 * [Installation](#installation)
 * [Usage](#usage)
+* [License](#license)
 
 ## Installation
 
@@ -106,7 +107,7 @@ import { NgBreadcrumbModule } from '@adelloste/ng-breadcrumb';
         BrowserModule,
         NgBreadcrumbModule.forRoot({
           prefixes: [
-            { url: '', label: 'Prefix-Global', params: {} }
+            { url: '', label: 'Prefix-Global', params: {}, icon: '' }
           ]
         })
     ],
@@ -135,7 +136,7 @@ import { Breadcrumb } from '@adelloste/ng-breadcrumb';
 })
 export class MainComponent implements OnInit {
 
-  public prefixs: Breadcrumb[] = [{ url: '', label: 'Prefix', params: {} }];
+  prefixs: Breadcrumb[] = [{ url: '', label: 'Prefix', params: {}, icon: '' }];
 
   constructor() { }
 
@@ -143,5 +144,11 @@ export class MainComponent implements OnInit {
 
 }
 ```
+
+**[⬆ back to top](#table-of-contents)**
+
+## License
+
+ng-breadrumb is MIT licensed.
 
 **[⬆ back to top](#table-of-contents)**

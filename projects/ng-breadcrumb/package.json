@@ -14,7 +14,7 @@
     "ng-breadcrumb",
     "ngx-breadcrumb"
   ],
-  "license": "ISC",
+  "license": "MIT",
   "repository": {
     "type": "git",
     "url": "https://github.com/adelloste/breadcrumb"
