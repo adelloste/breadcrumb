@@ -3,7 +3,7 @@ import { ActivatedRoute, Router, NavigationEnd }                  from '@angular
 
 import { Breadcrumb }       from '../../models/breadcrumb.model';
 import { BreadcrumbConfig } from '../../configs/breadcrumb.config';
-import { BREADCRUMB }       from '../../constants/breadcrumbs';
+import { BREADCRUMB, ICON } from '../../constants/breadcrumbs';
 
 import { Subscription } from 'rxjs';
 import { filter }       from 'rxjs/operators';
@@ -94,7 +94,7 @@ export class BreadcrumbComponent implements OnInit, OnChanges, OnDestroy {
         // Create url
         url = url + `/${routeURL}`;
         // Create breadcrumb
-        let breadcrumb: Breadcrumb = new Breadcrumb(url, child.snapshot.data[BREADCRUMB], child.snapshot.params);
+        let breadcrumb: Breadcrumb = new Breadcrumb(url, child.snapshot.data[BREADCRUMB], child.snapshot.params, child.snapshot.data[ICON]);
         // Add the breadcrumb
         breadcrumbs = [ ...breadcrumbs, breadcrumb ];
       }

@@ -10,7 +10,8 @@ import { MainComponent } from './components/main/main.component';
         path: '',
         component: MainComponent,
         data: {
-          breadcrumb: 'Home'
+          breadcrumb: 'Home',
+          icon: 'fa fa-home'
         },
         children: [
           {
