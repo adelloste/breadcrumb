@@ -1,9 +1,28 @@
 <aside class="sidebar shadow-sm">
+
+  <div class="wrapper-logo">
+    <a class="navbar-brand" href="https://angular.io">
+      <img src="https://angular.io/assets/images/logos/angular/logo-nav@2x.png" width="150" alt="Angular logo">
+    </a>
+  </div>
+
   <ul class="nav flex-column mt-3 menu-items">
     <li class="nav-item">
-      <a class="nav-link d-flex align-items-center" routerLink="levelone/1/2" routerLinkActive="active">
-        <i class="fa fa-home fa-15 mr-2" aria-hidden="true"></i>
+      <a class="nav-link d-flex align-items-center" routerLink="/home" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <i class="fa fa-home fa-2x mr-3" aria-hidden="true"></i>
         <span>Home</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" routerLink="/home/levelone/1/2" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }">
+        <i class="fa fa-home fa-2x mr-3" aria-hidden="true"></i>
+        <span>Level one</span>
+      </a>
+    </li>
+    <li class="nav-item">
+      <a class="nav-link d-flex align-items-center" routerLink="/home/levelone/1/2/leveltwo" routerLinkActive="active"  [routerLinkActiveOptions]="{ exact: true }">
+        <i class="fa fa-home fa-2x mr-3" aria-hidden="true"></i>
+        <span>Level two</span>
       </a>
     </li>
   </ul>
