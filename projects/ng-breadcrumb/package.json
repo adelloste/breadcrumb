@@ -1,6 +1,6 @@
 {
   "name": "@adelloste/ng-breadcrumb",
-  "version": "1.1.0",
+  "version": "1.1.1",
   "description": "A basic Angular module to display breadcrumb using native Angular router.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -19,7 +19,13 @@
     "type": "git",
     "url": "https://github.com/adelloste/breadcrumb"
   },
-  "author": "Alessandro Dell'Oste",
+  "bugs": {
+    "url": "https://github.com/adelloste/breadcrumb/issues"
+  },
+  "author": {
+    "name": "Alessandro Dell'Oste",
+    "email": "alessandro.delloste1@gmail.com"
+  },
   "peerDependencies": {
     "@angular/common": "^7.0.0",
     "@angular/core": "^7.0.0",
