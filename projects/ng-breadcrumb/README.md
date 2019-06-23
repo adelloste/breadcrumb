@@ -5,9 +5,16 @@ It is based on the built-in Angular router.
 
 ## Table of contents
 
+* [Demo](#demo)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
+
+## Demo
+
+Open [Demo](https://adelloste.github.io/breadcrumb).
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Installation
 
