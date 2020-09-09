@@ -5,9 +5,16 @@ It is based on the built-in Angular router.
 
 ## Table of contents
 
+* [Demo](#demo)
 * [Installation](#installation)
 * [Usage](#usage)
 * [License](#license)
+
+## Demo
+
+Open [Demo](https://adelloste.github.io/breadcrumb).
+
+**[⬆ back to top](#table-of-contents)**
 
 ## Installation
 
@@ -65,7 +72,7 @@ If you want to provide individual icons, add a `icon` property in the route's da
 export const ROUTES: Routes = [
     {
         path: 'home',
-        loadChildren: 'app/home/home.module#HomeModule',
+        loadChildren: () => import('./home/home.module').then(m => m.HomeModule)
         data: {
             breadcrumb: 'Home',
             icon: 'fa fa-home'  // I'm using font-awesome (only CSS classes)
@@ -73,7 +80,7 @@ export const ROUTES: Routes = [
     },
     {
         path: 'heros',
-        loadChildren: 'app/heros/heros.module#HerosModule',
+        loadChildren: () => import('./heros/heros.module').then(m => m.HerosModule)
         data: {
             breadcrumb: 'Heros'
         }
