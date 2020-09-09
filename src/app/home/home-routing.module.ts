@@ -16,7 +16,7 @@ import { MainComponent } from './components/main/main.component';
         children: [
           {
             path: 'levelone/:id/:ip',
-            loadChildren: '../level-one/level-one.module#LevelOneModule'
+            loadChildren: () => import('../level-one/level-one.module').then(m => m.LevelOneModule)
           }
         ]
       }

@@ -15,7 +15,7 @@ import { MainComponent } from './components/main/main.component';
         children: [
           {
             path: 'leveltwo',
-            loadChildren: '../level-two/level-two.module#LevelTwoModule'
+            loadChildren: () => import('../level-two/level-two.module').then(m => m.LevelTwoModule)
           }
         ]
       }
