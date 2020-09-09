@@ -1,6 +1,6 @@
 {
   "name": "@adelloste/ng-breadcrumb",
-  "version": "1.1.1",
+  "version": "1.2.0",
   "description": "A basic Angular module to display breadcrumb using native Angular router.",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
